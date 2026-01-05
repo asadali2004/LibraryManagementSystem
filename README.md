@@ -21,3 +21,12 @@ demonstrating core OOP concepts such as:
 1. Clone the repository
 2. Open solution in Visual Studio
 3. Run the project (Ctrl + F5)
+
+## Concepts Covered
+- Abstract Classes & Methods
+- Interfaces & Multiple Inheritance
+- Dynamic Polymorphism
+- Explicit Interface Implementation
+- Namespaces & Alias
+- Partial & Static Classes
+- Enums
