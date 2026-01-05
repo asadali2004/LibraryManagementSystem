@@ -5,7 +5,7 @@
 /// </summary>
     public class Member
     {
-        public string Name { get; set; } = string.Empty;
-        public UserRole Role { get; set; }
+        public string Name { get; set; } = string.Empty; // Name of the user
+        public UserRole Role { get; set; } // Role of the user within the system
     }
 }
