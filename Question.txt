@@ -1,0 +1,104 @@
+﻿Title: Library Management System – Scenario-Based Assignment
+Instructions:
+•	Follow each task exactly as specified.
+•	Show required proofs and explanations after each task.
+•	Target platform: .NET 10.
+Task 1: Abstract Class & Abstract Methods Requirements:
+•	Create one abstract base class LibraryItem with exactly 3 properties: Title, Author, ItemID.
+•	Define exactly 2 abstract methods:
+•	Display item details.
+•	Calculate late fee.
+•	Create two concrete classes: Book, Magazine.
+•	Both must inherit LibraryItem and override both abstract methods.
+•	Late fee rules:
+•	Book: 1 unit/day.
+•	Magazine: 0.5 units/day. Proof:
+•	Create 1 Book and 1 Magazine.
+•	Display Title, Author, ItemID, Late fee for exactly 3 days. Expected Output:
+•	Item Type: Book
+•	Title: C# Fundamentals
+•	Author: John Doe
+•	Item ID: 101
+•	Late Fee for 3 days: 3.0
+•	Item Type: Magazine
+•	Title: Tech Today
+•	Author: Jane Doe
+•	Item ID: 201
+•	Late Fee for 3 days: 1.5 Concept Confirmation:
+•	Book late fee = 3 × 1 = 3.0
+•	Magazine late fee = 3 × 0.5 = 1.5
+Task 2: Interfaces & Multiple Inheritance Requirements:
+•	Create IReservable with one reserve method.
+•	Create INotifiable with one method that accepts a message.
+•	Book must implement both and provide implementations. Proof:
+•	Call reservation and notification methods.
+•	Output must indicate reservation success and notification message sent. Expected Output:
+•	Book reserved successfully.
+•	Notification sent: Your reserved book is ready for pickup.
+Task 3: Dynamic Polymorphism Requirements:
+•	Create one collection of LibraryItem.
+•	Add 1 Book and 1 Magazine.
+•	Use a loop accessing items via LibraryItem type only. Proof:
+•	Correct DisplayItemDetails() executes for each runtime type. Mandatory Explanation (1–2 lines):
+•	The method executed depends on the object type at runtime, not the reference type. Expected Output:
+•	Item Type: Book
+•	Title: C# Fundamentals
+•	Author: John Doe
+•	Item ID: 101
+•	Item Type: Magazine
+•	Title: Tech Today
+•	Author: Jane Doe
+•	Item ID: 201
+Task 4: Explicit Interface Implementation Requirements:
+•	Modify Book to explicitly implement IReservable and INotifiable.
+•	Prevent direct calls to these methods via Book object. Proof:
+•	Call via IReservable and INotifiable references only. Mandatory Explanation (1 sentence):
+•	Explicit implementation prevents direct access and exposes functionality only through interfaces. Expected Output:
+•	Book reserved successfully.
+•	Notification: Please return the book on time.
+Task 5: Namespaces & Nested Namespaces Requirements:
+•	Main namespace: LibrarySystem.
+•	Nested namespaces: Items, Users.
+•	Place Book and Magazine in Items; place Member in Users.
+•	Create one namespace alias for LibrarySystem.Items. Proof:
+•	Use alias to create Book and Magazine objects. Mandatory Explanations (2 points):
+•	Nested namespaces organize large projects logically.
+•	Aliases reduce long namespace references and improve readability. Expected Proof:
+•	Successful object creation using alias.
+Task 6: Partial & Static Classes Requirements:
+•	Create partial class LibraryAnalytics split into two parts.
+•	Include:
+•	One static property tracking total borrowed items.
+•	One static method to display analytics. Proof:
+•	Increase borrowed count; display total borrowed items. Mandatory Explanation (1 line):
+•	Static members store system-wide data shared across all objects. Expected Output:
+•	Total Items Borrowed: 5
+Task 7: Enumerations (Enums) Requirements:
+•	Enum UserRole: Admin, Librarian, Member.
+•	Enum ItemStatus: Available, Borrowed, Reserved, Lost.
+•	Assign a role to a user and a status to a library item. Proof:
+•	Display user role and item status. Mandatory Explanation (1 sentence):
+•	Enums prevent invalid values and improve code readability. Expected Output:
+•	User Role: Member
+•	Item Status: Borrowed
+Bonus Task: Advanced Design Requirements:
+•	Modify notification logic by role:
+•	Admin → system alert.
+•	Member → borrowing update.
+•	Add new item type EBook:
+•	Inherits LibraryItem.
+•	Has one digital-specific behavior. Proof:
+•	Demonstrate role-based notification difference.
+•	Demonstrate EBook behavior execution. Expected Output:
+•	Admin Alert: System maintenance scheduled.
+•	Member Notification: Your borrowed item is due tomorrow.
+•	eBook Behavior Output: eBook downloaded successfully.
+Final Evaluation Checklist (Faculty)
+•	Abstraction: Different late fee outputs.
+•	Interfaces: Reservation + Notification.
+•	Polymorphism: Correct runtime method calls.
+•	Explicit Interface: Interface-only access.
+•	Namespaces: Alias usage.
+•	Static: Shared analytics.
+•	Enums: Controlled roles/status.
+•	Design Quality: Bonus task.
